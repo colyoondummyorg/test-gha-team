@@ -5,7 +5,7 @@ on:
 
 jobs:
   lint:
-    environment: test environment
+    # environment: test environment
     runs-on:
       - codebuild-test-gha-approval-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
