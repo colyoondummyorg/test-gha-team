@@ -8,6 +8,7 @@ jobs:
     environment: test environment
     runs-on:
       - codebuild-test-gha-approval-${{ github.run_id }}-${{ github.run_attempt }}
+      - deployment-status-override:true
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
