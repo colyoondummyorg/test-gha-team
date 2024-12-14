@@ -7,7 +7,7 @@ jobs:
   lint:
     environment: test environment
     runs-on:
-      - codebuild-test-org-registration-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-test-gha-team-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
