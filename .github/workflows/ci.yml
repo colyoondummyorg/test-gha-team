@@ -11,4 +11,4 @@ jobs:
       - buildspec-override:true
     steps:
       - name: test commands
-        run: echo "HELLO WORLD"
+        run: echo "HELLO WORLD "
