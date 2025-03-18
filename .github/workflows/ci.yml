@@ -3,12 +3,17 @@ name: CI-CodeBuild 🚀
 on:
   workflow_dispatch:
 
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   lint:
     environment: test environment
     runs-on:
       - codebuild-test-gha-approval-iad-${{ github.run_id }}-${{ github.run_attempt }}
-      - deployment-status-override:true
+      # - deployment-status-override:true
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
