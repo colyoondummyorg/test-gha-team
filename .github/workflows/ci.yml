@@ -7,7 +7,7 @@ jobs:
   lint:
     environment: test environment
     runs-on:
-      - codebuild-test-gha-approval-iad-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
       - deployment-status-override:true
     steps:
       - name: test commands
@@ -15,7 +15,7 @@ jobs:
   job2:
     environment: no-approval-environment
     runs-on:
-      - codebuild-test-gha-approval-iad-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
       - deployment-status-override:true
     steps:
       - name: test commands
