@@ -5,10 +5,9 @@ on:
 
 jobs:
   lint:
-    # environment: test environment
     runs-on:
-      - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
-      # - deployment-status-override:true
+      - codebuild-test-new-gha-features-${{ github.run_id }}-${{ github.run_attempt }}
+      
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
