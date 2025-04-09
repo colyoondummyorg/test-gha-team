@@ -5,18 +5,18 @@ on:
 
 jobs:
   lint:
-    environment: test environment
+    # environment: test environment
     runs-on:
       - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
-      - deployment-status-override:true
+      # - deployment-status-override:true
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
-  job2:
-    environment: no-approval-environment
-    runs-on:
-      - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
-      - deployment-status-override:true
-    steps:
-      - name: test commands
-        run: echo "HELLO WORLD"
+  # job2:
+  #   environment: no-approval-environment
+  #   runs-on:
+  #     - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
+  #     # - deployment-status-override:true
+  #   steps:
+  #     - name: test commands
+  #       run: echo "HELLO WORLD"
