@@ -6,7 +6,7 @@ on:
 jobs:
   lint:
     runs-on:
-      - codebuild-test-new-gha-features-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-test-gha-features-prod-${{ github.run_id }}-${{ github.run_attempt }}
       
     steps:
       - name: test commands
