@@ -9,6 +9,7 @@ jobs:
       - |
         codebuild-test-gha-features-prod-${{ github.run_id }}-${{ github.run_attempt }}
         organization-registration-name:colyoondummyorg
+        registration-group-id:3
       
     steps:
       - name: test commands
