@@ -7,8 +7,8 @@ jobs:
   lint:
     runs-on:
       - |
-          codebuild-test-gha-features-prod-${{ github.run_id }}-${{ github.run_attempt }}
-          organization-registration-name:colyoondummyorg
+        codebuild-test-gha-features-prod-${{ github.run_id }}-${{ github.run_attempt }}
+        organization-registration-name:colyoondummyorg
       
     steps:
       - name: test commands
