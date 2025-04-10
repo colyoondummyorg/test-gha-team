@@ -8,6 +8,7 @@ jobs:
     runs-on:
       - codebuild-test-gha-features-prod-${{ github.run_id }}-${{ github.run_attempt }}
         image:arm-3.0
+      - buildspec-override:true
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
