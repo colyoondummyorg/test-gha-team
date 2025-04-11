@@ -9,7 +9,6 @@ jobs:
     environment: no-approval-environment
     runs-on:
       - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
-        image:arm-3.0
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
