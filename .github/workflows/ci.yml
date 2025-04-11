@@ -5,18 +5,10 @@ on:
 
 jobs:
   lint:
+    environment: no-approval-environment
     runs-on:
-      - codebuild-test-gha-features-prod-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
         image:arm-3.0
-      - buildspec-override:true
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
-  # job2:
-  #   environment: no-approval-environment
-  #   runs-on:
-  #     - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
-  #     # - deployment-status-override:true
-  #   steps:
-  #     - name: test commands
-  #       run: echo "HELLO WORLD"
