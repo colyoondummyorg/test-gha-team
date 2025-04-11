@@ -5,7 +5,8 @@ on:
 
 jobs:
   lint:
-    environment: test environment
+    # environment: test environment
+    environment: no-approval-environment
     runs-on:
       - codebuild-test-environment-approval-beta-${{ github.run_id }}-${{ github.run_attempt }}
         image:arm-3.0
