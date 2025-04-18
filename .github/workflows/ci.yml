@@ -5,8 +5,8 @@ on:
 
 jobs:
   lint:
-    environment: test environment
-    # environment: no-approval-environment
+    # environment: test environment
+    environment: no-approval-environment
     runs-on:
       - codebuild-test-env-permissions-beta-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
