@@ -8,7 +8,7 @@ jobs:
     environment: test environment
     # environment: no-approval-environment
     runs-on:
-      - codebuild-test-env-permissions-beta-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-test-approval-permissions-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: test commands
         run: echo "HELLO WORLD"
